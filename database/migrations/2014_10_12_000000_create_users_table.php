@@ -23,8 +23,9 @@ class CreateUsersTable extends Migration
             $table->integer('unit_id')->unsigned();
             $table->string('key', 4)->unique();
             $table->string('name', 20);
-            $table->string('email', 100)->unique();
+            $table->string('email', 100);
             $table->string('password');
+            $table->string('image', 100)->nullable();
             $table->boolean('active')->default(true);
             $table->rememberToken();
             $table->timestamps();

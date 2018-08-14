@@ -5,13 +5,16 @@
  * Date: 14/08/2018
  * Time: 12:17
  */
+namespace App;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Notifications\Notifiable;
 class Troca extends Model
 {
     use Notifiable;
     use SoftDeletes;
 
-    protected $dates;
+    protected $dates = ['deleted_at'];
 
     /**
      * The attributes that are mass assignable.

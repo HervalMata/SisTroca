@@ -1,7 +1,12 @@
 <?php
 
 namespace App;
-
+/**
+ * Created by PhpStorm.
+ * User: Herval
+ * Date: 14/08/2018
+ * Time: 12:06
+ */
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -11,7 +16,7 @@ class User extends Authenticatable
     use Notifiable;
     use SoftDeletes;
 
-    protected $dates;
+    protected $dates = ['deleted_at'];
 
     /**
      * The attributes that are mass assignable.
